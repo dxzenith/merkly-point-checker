@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1024">
+    <title>Merkly Points Checker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Merkly Points Checker</h1>
+        <textarea id="walletAddressInput" rows="10" placeholder="Enter one wallet address per line"></textarea>
+        <button id="checkButton">Check Points</button>
+        <div id="loader" class="loader"></div>
+        <div id="result-container" class="result-container">
+            <table id="resultTable">
+                <thead style="display: none;">
+                    <tr>
+                        <th>Wallet Address</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
