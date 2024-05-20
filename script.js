@@ -59,7 +59,7 @@ async function fetchAndParseCsv(url) {
 
 
 function isValidEvmAddress(address) {
-    return /^0x[a-fA-F0-9]{40}$/.test(address);
+    return /^0x[a-fA-F0-9]{40}$/.test(address.toLowerCase());
 }
 
 
@@ -78,8 +78,9 @@ async function checkAddresses(addresses) {
     let foundAny = false;
     addresses.forEach(address => {
         let found = false;
+        const lowercaseAddress = address.toLowerCase();
         allData.forEach(({ points, addresses }) => {
-            if (addresses.includes(address.trim())) {
+            if (addresses.includes(lowercaseAddress.trim())) {
                 found = true;
                 foundAny = true;
                 const row = resultTable.insertRow();
