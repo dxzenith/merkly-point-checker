@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
+
 body {
     font-family: 'Lexend', sans-serif;
     background: #121212;
@@ -7,6 +9,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 
 .container {
@@ -28,6 +31,10 @@ h1 {
     color: #ffffff;
 }
 
+h1 span.rainbow {
+    animation: rainbow 3s infinite;
+}
+
 textarea {
     width: 100%;
     max-width: 400px;
@@ -46,24 +53,25 @@ textarea {
 }
 
 textarea:focus {
-    box-shadow: 0 0 15px #007bff;
+    box-shadow: 0 0 15px #ef731b;
 }
 
 button {
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
-    background: #007bff;
+    background: linear-gradient(45deg, #d70eb3, #0d9b7f);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
     margin-top: 10px;
 }
 
 button:hover {
-    background: #0056b3;
-    box-shadow: 0 0 10px #0056b3;
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #0d9b7f, #d70eb3);
+    box-shadow: 0 0 10px #8c36d2;
 }
 
 .loader {
@@ -71,7 +79,7 @@ button:hover {
     margin: 20px auto;
     border: 4px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 4px solid #007bff;
+    border-top: 4px solid #9816b3;
     width: 40px;
     height: 40px;
     animation: spin 1s linear infinite;
@@ -80,6 +88,16 @@ button:hover {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@keyframes rainbow {
+    0% { color: red; }
+    16% { color: orange; }
+    33% { color: yellow; }
+    50% { color: green; }
+    66% { color: blue; }
+    83% { color: indigo; }
+    100% { color: violet; }
 }
 
 .result-container {
@@ -99,7 +117,7 @@ th, td {
 }
 
 th {
-    background: #007bff;
+    background: #7b9512;
     color: #fff;
 }
 
@@ -107,7 +125,6 @@ td {
     background: #2a2a2a;
     color: #e0e0e0;
 }
-
 
 @media (max-width: 600px) {
     body {
